@@ -1,7 +1,13 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
   <head>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-pVpjMdU/B5aBgEQcXQKq3zR4ABRMJp0F41dhnh84hPf9+YV7nZ/8wK5u5gkzD+93P4Zx7tN9ZPl6XOmVJ63kyw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-pVpjMdU/B5aBgEQcXQKq3zR4ABRMJp0F41dhnh84hPf9+YV7nZ/8wK5u5gkzD+93P4Zx7tN9ZPl6XOmVJ63kyw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Credenciamento de Instrutores</title>
@@ -17,8 +23,8 @@
     <script>
       function toggleConteudo(id) {
         const el = document.getElementById(id);
-        el.classList.toggle("hidden");
         const icon = document.querySelector(`#${id}-icon`);
+        el.classList.toggle("hidden");
         icon.classList.toggle("rotate-180");
       }
     </script>
@@ -37,8 +43,7 @@
         Certificações EGPA
       </h2>
       <p class="text-lg mb-6">
-        Invista em sua qualificação profissional com as certificações da Escola de Governança Pública de Ananindeua (EGPA) e
-        destaque-se na carreira pública, contribuindo para uma gestão mais eficiente em Ananindeua.
+        Invista em sua qualificação profissional com as certificações da Escola de Governança Pública de Ananindeua (EGPA) e destaque-se na carreira pública, contribuindo para uma gestão mais eficiente em Ananindeua.
       </p>
       <div class="flex justify-center">
         <div class="bg-yellow-100 text-yellow-800 p-6 rounded-xl shadow-md max-w-xl text-center">
@@ -49,7 +54,7 @@
           <p class="text-base">Fique atento! Em breve novas turmas serão abertas com conteúdos exclusivos para servidores públicos municipais.</p>
         </div>
       </div>
-      <br><br><br>
+      <br /><br /><br />
     </section>
 
     <!-- Seção Serviços -->
@@ -57,37 +62,82 @@
       <div class="max-w-6xl mx-auto px-4">
         <h2 class="text-2xl font-bold border-b-4 border-[color:var(--azul-secundario)] text-black inline-block mb-10">Conheça mais</h2>
         <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-          <div class="bg-white rounded-xl shadow-md p-6">
-            <h3 class="text-xl font-semibold mb-2">Veja nossas certificações concluídas</h3>
-            <p>Veja as certificações anteriores que já foram concluídas e conheça os cursos que fizeram parte das edições passadas.</p><br>
-            <button class="flex items-center gap-2 border border-[color:var(--azul-principal)] text-[color:var(--azul-principal)] px-4 py-2 rounded hover:bg-[color:var(--azul-claro)] mb-2 transition duration-300" onclick="toggleConteudo('conteudo-bemestar')">
+          <!-- CARD COM CONTEÚDO EXPANSÍVEL REESTRUTURADO -->
+          <div class="bg-white rounded-xl shadow-md px-6 pt-6 pb-6 flex flex-col h-full min-h-[260px] relative">
+            <div class="mb-4">
+              <h3 class="text-xl font-semibold mb-1">Veja nossas Certificações Concluídas</h3>
+              <p>Veja as certificações anteriores que já foram concluídas e conheça os cursos que fizeram parte das edições passadas.</p><br><br><br><br>
+            </div>
+            <button
+              class="flex items-center gap-2 border border-[color:var(--azul-principal)] text-[color:var(--azul-principal)] px-4 py-2 rounded hover:bg-[color:var(--azul-claro)] transition duration-300 w-fit mb-2"
+              onclick="toggleConteudo('conteudo-bemestar')"
+            >
               <span>Certificações</span>
-              <svg id="conteudo-bemestar-icon" class="w-4 h-4 transition-transform duration-300 transform" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path></svg>
+              <svg
+                id="conteudo-bemestar-icon"
+                class="w-4 h-4 transition-transform duration-300 transform"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
+              </svg>
             </button>
             <ul id="conteudo-bemestar" class="list-disc list-inside text-sm mt-2 hidden">
               <li>Gestão Pública e Governança Eletrônica (Módulo 1)</li>
               <li>Gestão de Bem-Estar e Convivência (Módulo 1)</li>
             </ul>
           </div>
-          <div class="bg-white rounded-xl shadow-md p-6">
-            <h3 class="text-xl font-semibold mb-2">Seja um professor credenciado</h3>
-            <p>Faça parte do corpo docente da EGPA e contribua com as certificações para os servidores públicos.</p>
-            <a href="https://forms.gle/A4kADz3yS4gurenJ9" class="mt-4 border border-[color:var(--azul-principal)] text-[color:var(--azul-principal)] px-4 py-2 rounded hover:bg-[color:var(--azul-claro)] inline-block text-center">Se cadastrar</a>
+
+          <!-- OUTROS CARDS COM BOTÕES FIXOS -->
+          <div class="bg-white rounded-xl shadow-md px-6 pt-6 pb-6 flex flex-col justify-between h-full min-h-[220px] relative">
+            <div>
+              <h3 class="text-xl font-semibold mb-1">Seja um Professor Credenciado</h3>
+              <p class="mb-2">Faça parte do corpo docente da EGPA e contribua com as certificações para os servidores públicos.</p>
+            </div>
+            <a
+              href="https://forms.gle/A4kADz3yS4gurenJ9"
+              class="absolute bottom-4 left-6 border border-[color:var(--azul-principal)] text-[color:var(--azul-principal)] px-4 py-2 rounded hover:bg-[color:var(--azul-claro)] inline-block text-center w-fit"
+              >Se Cadastrar</a
+            >
           </div>
-          <div class="bg-white rounded-xl shadow-md p-6">
-            <h3 class="text-xl font-semibold mb-2">Solicite sua declaração de carga horária</h3>
-            <p>Receba declaração oficial de participação e carga horária das certificações da EGPA.</p>
-            <a href="https://wa.me/5591984069956" class="mt-4 border border-[color:var(--azul-principal)] text-[color:var(--azul-principal)] px-4 py-2 rounded hover:bg-[color:var(--azul-claro)] inline-block text-center">Solicitar</a>
+
+          <div class="bg-white rounded-xl shadow-md px-6 pt-6 pb-6 flex flex-col justify-between h-full min-h-[220px] relative">
+            <div>
+              <h3 class="text-xl font-semibold mb-1">Solicite sua Declaração de Carga Horária</h3>
+              <p class="mb-2">Receba declaração oficial de participação e carga horária das certificações da EGPA.</p>
+            </div>
+            <a
+              href="https://wa.me/5591984069956"
+              class="absolute bottom-4 left-6 border border-[color:var(--azul-principal)] text-[color:var(--azul-principal)] px-4 py-2 rounded hover:bg-[color:var(--azul-claro)] inline-block text-center w-fit"
+              >Solicitar</a
+            >
           </div>
-          <div class="bg-white rounded-xl shadow-md p-6">
-            <h3 class="text-xl font-semibold mb-2">Solicite seu certificado</h3>
-            <p>Receba sua certificação oficial realizadas na EGPA.</p>
-            <a href="https://wa.me/5591984069956" class="mt-4 border border-[color:var(--azul-principal)] text-[color:var(--azul-principal)] px-4 py-2 rounded hover:bg-[color:var(--azul-claro)] inline-block text-center">Solicitar</a>
+
+          <div class="bg-white rounded-xl shadow-md px-6 pt-6 pb-6 flex flex-col justify-between h-full min-h-[220px] relative">
+            <div>
+              <h3 class="text-xl font-semibold mb-1">Solicite seu Certificado</h3>
+              <p class="mb-2">Receba sua certificação oficial realizadas na EGPA.</p>
+            </div>
+            <a
+              href="https://wa.me/5591984069956"
+              class="absolute bottom-4 left-6 border border-[color:var(--azul-principal)] text-[color:var(--azul-principal)] px-4 py-2 rounded hover:bg-[color:var(--azul-claro)] inline-block text-center w-fit"
+              >Solicitar</a
+            >
           </div>
-          <div class="bg-white rounded-xl shadow-md p-6">
-            <h3 class="text-xl font-semibold mb-2">Faça sugestão de certificação</h3>
-            <p>Sugira novos temas e áreas para futuras certificações da EGPA.</p>
-            <a href="https://wa.me/5591984069956" class="mt-4 border border-[color:var(--azul-principal)] text-[color:var(--azul-principal)] px-4 py-2 rounded hover:bg-[color:var(--azul-claro)] inline-block text-center">Sugerir</a>
+
+          <div class="bg-white rounded-xl shadow-md px-6 pt-6 pb-6 flex flex-col justify-between h-full min-h-[220px] relative">
+            <div>
+              <h3 class="text-xl font-semibold mb-1">Faça sugestão de certificação</h3>
+              <p class="mb-2">Sugira novos temas e áreas para futuras certificações da EGPA.</p>
+            </div>
+            <a
+              href="https://wa.me/5591984069956"
+              class="absolute bottom-4 left-6 border border-[color:var(--azul-principal)] text-[color:var(--azul-principal)] px-4 py-2 rounded hover:bg-[color:var(--azul-claro)] inline-block text-center w-fit"
+              >Sugerir</a
+            >
           </div>
         </div>
       </div>
@@ -95,7 +145,7 @@
 
     <!-- Rodapé -->
     <footer class="bg-[color:var(--azul-principal)] text-white text-center py-6">
-      <p>&copy; 2025 DTI-EGPA. Todos os direitos reservados.</p>
+      <p>&copy; DTI-EGPA/2025. Todos os direitos reservados.</p>
     </footer>
 
     <!-- Botão Flutuante WhatsApp -->
