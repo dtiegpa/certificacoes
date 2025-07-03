@@ -130,15 +130,33 @@
             </button>
           </div>
 
-          <div class="bg-white rounded-xl shadow-md px-6 pt-6 pb-6 flex flex-col justify-between h-full min-h-[220px] relative">
-            <div>
+            <!-- CARD COM CONTEÚDO EXPANSÍVEL REESTRUTURADO -->
+          <div class="bg-white rounded-xl shadow-md px-6 pt-6 pb-6 flex flex-col h-full min-h-[260px] relative">
+            <div class="mb-4">
               <h3 class="text-xl font-semibold mb-1">Veja nossas Certificações Concluídas</h3>
-              <p class="mb-2">Veja as certificações anteriores que já foram concluídas e conheça os cursos que fizeram parte das edições passadas.</p>
+              <p>Veja as certificações anteriores que já foram concluídas e conheça os cursos que fizeram parte das edições passadas.</p><br><br><br><br>
             </div>
-            <a href="#"
-              class="absolute bottom-4 left-6 border border-[color:var(--azul-principal)] text-[color:var(--azul-principal)] px-4 py-2 rounded hover:bg-[color:var(--azul-claro)] inline-block text-center w-fit">
-              Acessar
-            </a>
+            <button
+              class="flex items-center gap-2 border border-[color:var(--azul-principal)] text-[color:var(--azul-principal)] px-4 py-2 rounded hover:bg-[color:var(--azul-claro)] transition duration-300 w-fit mb-2"
+              onclick="toggleConteudo('conteudo-bemestar')"
+            >
+              <span>Certificações</span>
+              <svg
+                id="conteudo-bemestar-icon"
+                class="w-4 h-4 transition-transform duration-300 transform"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"></path>
+              </svg>
+            </button>
+            <ul id="conteudo-bemestar" class="list-disc list-inside text-sm mt-2 hidden">
+              <li>Gestão Pública e Governança Eletrônica (Módulo 1)</li>
+              <li>Gestão de Bem-Estar e Convivência (Módulo 1)</li>
+            </ul>
           </div>
 
           <div class="bg-white rounded-xl shadow-md px-6 pt-6 pb-6 flex flex-col justify-between h-full min-h-[220px] relative">
